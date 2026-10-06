@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Study AI Desk — Post-Intervention Analytics</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e9f0;--accent:#5b5ce2;--green:#159a68;--amber:#d28a00;--red:#d84d58;--blue:#2878d7;--shadow:0 8px 24px rgba(20,32,55,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}.container{max-width:1450px;margin:auto;padding:28px}
+header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}h1{margin:0 0 6px;font-size:29px}.sub{color:var(--muted);font-size:14px}.badge{background:#ececff;color:#4748b7;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:var(--shadow)}.metric .label{font-size:12px;color:var(--muted)}.metric .value{font-size:29px;font-weight:850;margin:7px 0}.metric .small{font-size:11px;color:var(--muted)}
+.main{display:grid;grid-template-columns:1.45fr 1fr;gap:17px;margin-top:17px}.title{font-size:17px;font-weight:850;margin-bottom:14px}
+.state{padding:14px;border-radius:11px;background:#eaf8f1;color:#14744f;font-weight:800;margin-bottom:13px}
+.live{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.box{border:1px solid var(--line);background:#fbfcfe;border-radius:11px;padding:13px}.box span{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}.box strong{font-size:17px}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-size:11px}
+.barrow{margin:12px 0}.top{display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px}.bar{height:9px;background:#edf0f5;border-radius:99px;overflow:hidden}.fill{height:100%;background:var(--accent);border-radius:99px}
+.chart{height:175px;display:flex;align-items:flex-end;gap:13px}.col{flex:1;text-align:center}.shape{background:linear-gradient(180deg,#7779ee,#5558d7);border-radius:7px 7px 2px 2px;min-height:10px}.lab{font-size:10px;color:var(--muted);margin-top:6px}
+.pill{display:inline-block;padding:4px 7px;border-radius:99px;font-size:10px;font-weight:800}.good{background:#e7f7ef;color:#14734e}.warn{background:#fff2d7;color:#8d6100}.bad{background:#fdecef;color:#a73440}
+.insight{background:#f1f1ff;border-left:4px solid var(--accent);padding:13px;border-radius:7px;font-size:12px;line-height:1.55}
+.note{background:#fff8e7;border:1px solid #f0dda9;color:#735b1d;padding:11px;border-radius:9px;font-size:11px;line-height:1.5;margin-top:12px}
+.footer{margin-top:17px;text-align:center;color:var(--muted);font-size:10px}
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}.main{grid-template-columns:1fr}}@media(max-width:600px){.container{padding:15px}.grid{grid-template-columns:1fr}.live{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<header><div><h1>Smart Study AI Desk</h1><div class="sub">Post-Intervention Analytics & Effectiveness Dashboard</div></div><div class="badge">PHASE 2 • SAMPLE ANALYSIS</div></header>
+
+<div class="grid">
+<div class="card metric"><div class="label">Interventions Today</div><div class="value">7</div><div class="small">Across 6 study sessions</div></div>
+<div class="card metric"><div class="label">Successful Responses</div><div class="value">5 / 7</div><div class="small">71% followed by improved state</div></div>
+<div class="card metric"><div class="label">Avg. Recovery Time</div><div class="value">4.6 min</div><div class="small">Intervention → improved state</div></div>
+<div class="card metric"><div class="label">Attention Improvement</div><div class="value">+14%</div><div class="small">Illustrative before/after metric</div></div>
+</div>
+
+<div class="main">
+<div>
+<div class="card">
+<div class="title">Latest Intervention Outcome</div>
+<div class="state">INTERVENTION COMPLETED — State improved after posture reminder</div>
+<div class="live">
+<div class="box"><span>Before</span><strong>Distracted</strong></div>
+<div class="box"><span>After</span><strong>Focused</strong></div>
+<div class="box"><span>Intervention</span><strong>Distraction warning</strong></div>
+<div class="box"><span>Response time</span><strong>3.8 min</strong></div>
+</div>
+<div class="insight" style="margin-top:13px"><b>System interpretation:</b> The intervention was followed by a transition from a distracted state to a focused state. This is recorded as a successful intervention response for future personalisation.</div>
+<div class="note">The outcome values shown here are illustrative prototype data. Once the real system is connected, these fields should be calculated from actual state transitions and intervention timestamps.</div>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">Before vs After Intervention</div>
+<table>
+<tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr>
+<tr><td>Attention</td><td>Distracted</td><td>Focused</td><td><span class="pill good">Improved</span></td></tr>
+<tr><td>Posture</td><td>Slouching</td><td>Good</td><td><span class="pill good">Improved</span></td></tr>
+<tr><td>Study continuity</td><td>Interrupted</td><td>Continued</td><td><span class="pill good">Improved</span></td></tr>
+<tr><td>Intervention response</td><td>—</td><td>3.8 min</td><td><span class="pill good">Recorded</span></td></tr>
+</table>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">Intervention Effectiveness by Type</div>
+<div class="barrow"><div class="top"><span>Distraction warning</span><b>80%</b></div><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="barrow"><div class="top"><span>Posture reminder</span><b>75%</b></div><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+<div class="barrow"><div class="top"><span>Break recommendation</span><b>67%</b></div><div class="bar"><div class="fill" style="width:67%"></div></div></div>
+<div class="barrow"><div class="top"><span>Re-engagement prompt</span><b>50%</b></div><div class="bar"><div class="fill" style="width:50%"></div></div></div>
+</div>
+</div>
+
+<div>
+<div class="card">
+<div class="title">Intervention History</div>
+<table>
+<tr><th>Time</th><th>Trigger</th><th>Action</th><th>Result</th></tr>
+<tr><td>18:02</td><td>Distracted</td><td>Warning</td><td><span class="pill good">Focused</span></td></tr>
+<tr><td>17:44</td><td>Slouching</td><td>Posture reminder</td><td><span class="pill good">Good posture</span></td></tr>
+<tr><td>17:18</td><td>52 min</td><td>Break recommendation</td><td><span class="pill good">Returned</span></td></tr>
+<tr><td>16:55</td><td>Inactive</td><td>Re-engagement</td><td><span class="pill warn">Partial</span></td></tr>
+<tr><td>16:21</td><td>Distracted</td><td>Warning</td><td><span class="pill bad">No change</span></td></tr>
+</table>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">Post-Intervention State Distribution</div>
+<div class="chart">
+<div class="col"><div class="shape" style="height:120px"></div><div class="lab">Focused<br>62%</div></div>
+<div class="col"><div class="shape" style="height:52px"></div><div class="lab">Normal<br>18%</div></div>
+<div class="col"><div class="shape" style="height:35px"></div><div class="lab">Distracted<br>12%</div></div>
+<div class="col"><div class="shape" style="height:22px"></div><div class="lab">Poor posture<br>6%</div></div>
+<div class="col"><div class="shape" style="height:10px"></div><div class="lab">Inactive<br>2%</div></div>
+</div>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">Personalisation Analysis</div>
+<div class="insight"><b>Observed pattern:</b> Attention tends to fall after longer continuous sessions. If the same pattern is confirmed across future sessions, the system can recommend a break around the student's typical attention-drop period.</div>
+<div style="margin-top:12px;font-size:12px;line-height:1.6">
+• Most successful response: distraction warning<br>
+• Most frequent issue: distraction<br>
+• Current average recovery: 4.6 minutes<br>
+• Next step: compare intervention type with repeated response history
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">UI/UX Analysis After Intervention</div>
+<table>
+<tr><th>UX question</th><th>What the dashboard should analyse</th><th>Design implication</th></tr>
+<tr><td>Did the user respond?</td><td>State before vs after intervention</td><td>Show a simple success/partial/no-change outcome.</td></tr>
+<tr><td>How quickly?</td><td>Time from intervention to improved state</td><td>Display response time and recovery trend.</td></tr>
+<tr><td>Which intervention works?</td><td>Success rate by intervention type</td><td>Prioritise effective interventions in future sessions.</td></tr>
+<tr><td>Is the problem recurring?</td><td>Repeated triggers and session history</td><td>Surface recurring patterns instead of isolated alerts.</td></tr>
+<tr><td>Can it be personalised?</td><td>Previous responses and attention-drop patterns</td><td>Move from fixed rules toward student-specific recommendations.</td></tr>
+</table>
+</div>
+
+<div class="card" style="margin-top:17px">
+<div class="title">What This Phase Demonstrates</div>
+<div class="grid" style="grid-template-columns:repeat(4,1fr);gap:10px">
+<div class="box"><span>01</span><strong>Detect</strong><p style="font-size:11px;color:var(--muted)">Identify a poor study state.</p></div>
+<div class="box"><span>02</span><strong>Intervene</strong><p style="font-size:11px;color:var(--muted)">Deliver the appropriate feedback.</p></div>
+<div class="box"><span>03</span><strong>Measure</strong><p style="font-size:11px;color:var(--muted)">Compare state before and after.</p></div>
+<div class="box"><span>04</span><strong>Learn</strong><p style="font-size:11px;color:var(--muted)">Use response history for personalisation.</p></div>
+</div>
+</div>
+
+<div class="footer">Smart Study AI Desk • Post-Intervention Analytics • Illustrative values until real intervention logs are available.</div>
+</div>
+</body>
+</html>
